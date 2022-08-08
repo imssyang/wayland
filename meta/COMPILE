@@ -10,3 +10,14 @@ meson setup \
 
 ninja -j8
 ninja install
+
+cd wayland-protocols-1.26
+mkdir build && cd build
+
+meson setup \
+  --backend=ninja \
+  --buildtype=release \
+  --prefix=/opt/wayland
+
+ninja -j8
+ninja install
