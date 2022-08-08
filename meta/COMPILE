@@ -1,0 +1,12 @@
+
+cd wayland-1.21.0
+mkdir build && cd build
+
+meson setup \
+  --backend=ninja \
+  --buildtype=release \
+  --prefix=/opt/wayland \
+  -Ddocumentation=false
+
+ninja -j8
+ninja install
